@@ -9,7 +9,7 @@
     <meta name="author" content="karlf">
 
     <title>数字听力 - 首页</title>
-    <link href="../../static/img/headphones.png" rel="icon" type="image/x-ico">
+    <link href="../../static/img/logo.png" rel="icon" type="image/x-ico">
 
     <!-- 自定义字体 -->
     <link href="../../static/vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -180,19 +180,6 @@
                                             <label class="form-check-label" for="repeat">循环播放</label>
                                         </div>
                                     </div>
-
-                                    <!-- 判断是否循环 -->
-                                    <script>
-                                        var repeat = document.getElementById('repeat');
-                                        var audio = document.getElementById('audio');
-                                        repeat.onchange = function() {
-                                            if (repeat.checked) {
-                                                document.getElementById('audio').loop = true;
-                                            } else {
-                                                document.getElementById('audio').loop = false;
-                                            }
-                                        }
-                                    </script>
 
                                     <!-- 生成区 -->
                                     <div id="is_show" class="collapse show pt-3">

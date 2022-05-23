@@ -39,7 +39,7 @@ def get_speech(lang, rate, say_as, text):
     ssml_behind = """</prosody></lang></voice></speak>"""
 
     ssml = ssml_front + ssml_center + ssml_behind
-    print(ssml)
+    # print('ssml语句：' + ssml)
 
     speech_synthesis_result = speech_synthesizer.speak_ssml_async(ssml).get()
 

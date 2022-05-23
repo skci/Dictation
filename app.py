@@ -164,13 +164,12 @@ def say(lang, rate):
             data_list = say_num(lang, rate, int_places, float_places)
 
     # 数据监控
-    print('生成数据：' + str(data_list[0]))
+    # print('生成数据：' + str(data_list[0]))
     print('生成语音文件：' + data_list[1])
 
     return render_template('dictation.html', lang=lang, rate = rate, data_list=data_list[0], file_name=data_list[1])
 
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=False)
-    # serve(app, host='127.0.0.1', port=14771, threads=1)
-    # num('en-US', '+0', 2, 2)
+    # app.run(debug=True, threaded=False)
+    serve(app, host='127.0.0.1', port=14771, threads=6)
