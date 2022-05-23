@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="不得不说，选好方向真重要，这都能骗到钱！收费倒是可以理解，因为需要一些服务，但是拿来赚钱，不可取！">
+    <meta name="author" content="karlf">
+
+    <title>数字听力 - 首页</title>
+    <link href="../../static/img/headphones.png" rel="icon" type="image/x-ico">
+
+    <!-- 自定义字体 -->
+    <link href="../../static/vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+    <link href="../../static/vendor/fonts.css" rel="stylesheet">
+
+    <!-- 自定义样式 -->
+    <link href="../../static/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <!--页面包装器-->
+    <div id="wrapper">
+
+        <!-- 内容包装器 -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- 主要内容 -->
+            <div id="content">
+
+                <!-- 顶部栏 -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow">
+
+                    <!-- 返回首页（顶部栏） -->
+                    <a id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3" href="/">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+
+                </nav>
+                <!-- 顶部栏结束 -->
+
+                <!-- 开始页面内容 -->
+                <div class="container-fluid">
+
+                    <!-- 内容行 -->
+                    <div class="row">
+
+                        <!-- 卡片 -->
+                        <div class="col-12">
+                            <div class="card shadow mb-2">
+                                <!-- 卡片头 -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">{{lang}}</h6>
+                                </div>
+
+                                <!-- 卡片主体 -->
+                                <form class="card-body" action="/dictation/{{lang}}/{{rate}}" method="get">
+
+                                    <!-- 下拉列表选择取数范围 -->
+                                    <div class="row" >
+                                        <div class="col-6 text-center">
+                                            <label for="sel1" class="form-label">整数位数:</label>
+                                            <select class="form-control" id="sel1" name="int" style="height: 30px;">
+                                                <option value=4></option>
+                                                <option value=2>2</option>
+                                                <option value=3>3</option>
+                                                <option value=4>4</option>
+                                                <option value=5>5</option>
+                                                <option value=6>6</option>
+                                                <option value=7>7</option>
+                                                <option value=8>8</option>
+                                                <option value=9>9</option>
+                                                <option value=10>10</option>
+                                                <option value=11>11</option>
+                                                <option value=12>12</option>
+                                                <option value=13>13</option>
+                                                <option value=14>14</option>
+                                                <option value=15>15</option>
+                                                <option value=16>16</option>
+                                                <option value=17>17</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-6 text-center">
+                                            <label for="sel2" class="form-label">小数位数:</label>
+                                            <select class="form-control" id="sel2" name="float" style="height: 30px;">
+                                                <option value=0></option>
+                                                <option value=0>0</option>
+                                                <option value=1>1</option>
+                                                <option value=2>2</option>
+                                                <option value=3>3</option>
+                                                <option value=4>4</option>
+                                                <option value=5>5</option>
+                                                <option value=6>6</option>
+                                                <option value=7>7</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- 提交并生成数字 -->
+                                    <div class="row pt-3 pb-3">
+                                        <div class="col-12 btn-group container" style="height: 36px;">
+                                            <button type="submit" class="btn btn-primary" name="value" value="num"
+                                                data-bs-toggle="collapse" data-bs-target="#num" style="height: 48px;">
+                                                <div id="num" class="collapse show">生成数字</div>
+                                                <span id="num" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- 按钮对应功能 -->
+                                    <div class="row pt-3">
+                                        <div class="col-6 btn-group-vertical">
+                                            <button type="submit" class="btn btn-primary" name="value" value="date"
+                                                data-bs-toggle="collapse" data-bs-target="#date">
+                                                <div id="date" class="collapse show">日期</div>
+                                                <span id="date" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                            <button type="submit" class="btn btn-primary" name="value" value="time"
+                                                data-bs-toggle="collapse" data-bs-target="#time">
+                                                <div id="time" class="collapse show">时间</div>
+                                                <span id="time" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                            <button type="submit" class="btn btn-primary" name="value" value="no"
+                                                data-bs-toggle="collapse" data-bs-target="#no">
+                                                <div id="no" class="collapse show">序数</div>
+                                                <span id="no" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-6 btn-group-vertical">
+                                            <button type="submit" class="btn btn-primary" name="value" value="money"
+                                                data-bs-toggle="collapse" data-bs-target="#money">
+                                                <div id="money" class="collapse show">金额</div>
+                                                <span id="money" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                            <button type="submit" class="btn btn-primary" name="value" value="tel"
+                                                data-bs-toggle="collapse" data-bs-target="#tel">
+                                                <div id="tel" class="collapse show">电话</div>
+                                                <span id="tel" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                            <button type="submit" class="btn btn-primary" name="value" value="teen"
+                                                data-bs-toggle="collapse" data-bs-target="#teen">
+                                                <div id="teen" class="collapse show">teen/ty</div>
+                                                <span id="teen" class="spinner-border spinner-border-sm collapse"
+                                                    style="padding: 8px 8px 8px 8px;"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- 播放停止按钮
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col-12 btn-group">
+                                        <button type="submit" class="btn btn-success " id="value" value="play">播放</button>
+                                        <button type="reset" class="btn btn-danger " id="value" value="stop">停止</button>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- 音乐播放器 -->
+                                    <audio id="audio" class="col-12 pt-3" controls="controls">
+                                        <source src="../../{{file_name}}">
+                                    </audio>
+
+                                    <!-- 功能键（显示/循环） -->
+                                    <div class="row pt-3">
+                                        <div class="form-check form-switch col-6 text-center">
+                                            <input href="#is_show" class="form-check-input" type="checkbox" checked data-bs-toggle="collapse">
+                                            <label class="form-check-label">显示数字</label>
+                                        </div>
+                                        <div class="form-check form-switch col-6 text-center">
+                                            <input class="form-check-input" type="checkbox" id="repeat" checked>
+                                            <label class="form-check-label" for="repeat">循环播放</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- 判断是否循环 -->
+                                    <script>
+                                        var repeat = document.getElementById('repeat');
+                                        var audio = document.getElementById('audio');
+                                        repeat.onchange = function() {
+                                            if (repeat.checked) {
+                                                document.getElementById('audio').loop = true;
+                                            } else {
+                                                document.getElementById('audio').loop = false;
+                                            }
+                                        }
+                                    </script>
+
+                                    <!-- 生成区 -->
+                                    <div id="is_show" class="collapse show pt-3">
+                                        <table style="width: 100%; text-align: center;">
+                                            <tr>
+                                                <td>{{data_list[0]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[1]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[2]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[3]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[4]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[5]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[6]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[7]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[8]}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{data_list[9]}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /开始页面内容 -->
+
+            </div>
+            <!-- 主要内容结束 -->
+
+            <!-- 页脚 -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        
+                        <span><i class="fa fa-comment"></i>　xiaokkk@foxmail.com</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- 页脚结束 -->
+
+        </div>
+        <!-- 内容包装结束 -->
+
+    </div>
+    <!-- 页面包装器结束 -->
+
+    <!--Bootstrap 核心插件JS-->
+    <script src="../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 核心插件JS -->
+    <script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- 自定义JS -->
+    <script src="../../static/js/sb-admin-2.min.js"></script>
+</body>
+
+</html>
