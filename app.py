@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from waitress import serve
+# from waitress import serve
 
 from get_data import _get_num, get_time, get_date, get_money, get_teen, get_tel, get_no
 from get_speech import get_speech
@@ -165,11 +165,12 @@ def say(lang, rate):
 
     # 数据监控
     # print('生成数据：' + str(data_list[0]))
-    print('生成语音文件：' + data_list[1])
+    # print('生成语音文件：' + data_list[1])
 
-    return render_template('dictation.html', lang=lang, rate = rate, data_list=data_list[0], file_name=data_list[1])
+    return render_template('dictation.html', lang=lang, rate=rate, data_list=data_list[0], file_name=data_list[1])
 
 
 if __name__ == '__main__':
-    # app.run(debug=True, threaded=False)
-    serve(app, host='127.0.0.1', port=14771, threads=6)
+    app.run()
+    # serve(app, host='0.0.0.0', port=1477, threads=6)
+

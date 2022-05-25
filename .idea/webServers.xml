@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0efe75c4-273e-41d5-a035-cbdbeddf4da0" name="jp-ubuntu" url="http://karlf.me">
+        <fileTransfer rootFolder="/www/wwwroot" accessType="SFTP" host="karlf.japaneast.cloudapp.azure.com" port="22" sshConfigId="03e81a76-4673-49cd-ba7e-81144a9b10fa" sshConfig="root@karlf.japaneast.cloudapp.azure.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

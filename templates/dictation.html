@@ -60,7 +60,7 @@
                                 <form class="card-body" action="/dictation/{{lang}}/{{rate}}" method="get">
 
                                     <!-- 下拉列表选择取数范围 -->
-                                    <div class="row" >
+                                    <div class="row">
                                         <div class="col-6 text-center">
                                             <label for="sel1" class="form-label">整数位数:</label>
                                             <select class="form-control" id="sel1" name="int" style="height: 30px;">
@@ -100,10 +100,10 @@
                                         </div>
                                     </div>
                                     <!-- 提交并生成数字 -->
-                                    <div class="row pt-3 pb-3">
-                                        <div class="col-12 btn-group container" style="height: 36px;">
+                                    <div class="row mt-2 mb-2">
+                                        <div class="col-12 btn-group container">
                                             <button type="submit" class="btn btn-primary" name="value" value="num"
-                                                data-bs-toggle="collapse" data-bs-target="#num" style="height: 48px;">
+                                                data-bs-toggle="collapse" data-bs-target="#num">
                                                 <div id="num" class="collapse show">生成数字</div>
                                                 <span id="num" class="spinner-border spinner-border-sm collapse"
                                                     style="padding: 8px 8px 8px 8px;"></span>
@@ -114,7 +114,7 @@
 
 
                                     <!-- 按钮对应功能 -->
-                                    <div class="row pt-3">
+                                    <div class="row mt-2 mb-2">
                                         <div class="col-6 btn-group-vertical">
                                             <button type="submit" class="btn btn-primary" name="value" value="date"
                                                 data-bs-toggle="collapse" data-bs-target="#date">
@@ -165,24 +165,24 @@
                                     </div> -->
 
                                     <!-- 音乐播放器 -->
-                                    <audio id="audio" class="col-12 pt-3" controls="controls">
+                                    <audio id="audio" class="row col-12 mt-3 mb-3" controls="controls">
                                         <source src="../../{{file_name}}">
                                     </audio>
 
                                     <!-- 功能键（显示/循环） -->
-                                    <div class="row pt-3">
+                                    <div class="row mt-2 mb-2">
                                         <div class="form-check form-switch col-6 text-center">
-                                            <input href="#is_show" class="form-check-input" type="checkbox" checked data-bs-toggle="collapse">
-                                            <label class="form-check-label">显示数字</label>
+                                            <input href="#is_show" class="form-check-input btn-lg" type="checkbox" checked data-bs-toggle="collapse">
+                                            <label class="form-check-label pt-1">显示数字</label>
                                         </div>
                                         <div class="form-check form-switch col-6 text-center">
-                                            <input class="form-check-input" type="checkbox" id="repeat" checked>
-                                            <label class="form-check-label" for="repeat">循环播放</label>
+                                            <input class="form-check-input btn-lg" type="checkbox" id="repeat" checked>
+                                            <label class="form-check-label pt-1" for="repeat">循环播放</label>
                                         </div>
                                     </div>
 
                                     <!-- 生成区 -->
-                                    <div id="is_show" class="collapse show pt-3">
+                                    <div id="is_show" class="collapse show mt-3">
                                         <table style="width: 100%; text-align: center;">
                                             <tr>
                                                 <td>{{data_list[0]}}</td>
