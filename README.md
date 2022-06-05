@@ -1,4 +1,6 @@
 ## 外语数字听力
+# __clone之前不妨点个star，这对我非常重要__
+
 ### Flask 2.1.2
 ### azure.cognitiveservices.speech
 ![image](https://user-images.githubusercontent.com/31680619/172036353-572dcdc6-c9da-4455-a755-20fc9d897235.png)
