@@ -1,8 +1,16 @@
 ## 外语数字听力
-# __clone之前不妨点个star，这对我非常重要__
 
-### Flask 2.1.2
-### azure.cognitiveservices.speech
-![image](https://user-images.githubusercontent.com/31680619/172036353-572dcdc6-c9da-4455-a755-20fc9d897235.png)
-![image](https://user-images.githubusercontent.com/31680619/172036366-15c18fb9-8a23-4e30-8746-97e54ccd314a.png)
-![image](https://user-images.githubusercontent.com/31680619/172036325-5fa8f12e-3f82-484d-8643-67a7a8ba56e3.png)
+<p>
+<img src="https://user-images.githubusercontent.com/31680619/172036325-5fa8f12e-3f82-484d-8643-67a7a8ba56e3.png"  align = "right"  height="650" />
+
+  ### 运行环境
+    Flask 2.1.2
+    
+    azure.cognitiveservices.speech
+
+
+### 赞助
+
+<img src="https://github.com/skci/VLPR/assets/31680619/2629fe59-24b6-464b-901a-6c63d332a083"  align = "left"  height="400" />
+<img src="https://github.com/skci/VLPR/assets/31680619/003cf061-e4f6-478f-8e20-6b891a0255ff"  align = "center"  height="400" />
+</p>
